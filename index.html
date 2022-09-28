@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Ocult</title>
+    </head>
+    <body>
+        <header class="navBar">
+            <section class="navBar__container">
+                <img class="navBar__logo" src="images/OcultLogo.png" alt="Logo Ocult">
+                <span class="material-icons navBar__infoIcon">help</span>
+            </section>
+        </header>
+        <main class="dashboard">
+            <article class="card profile">
+                <img class="profile__photo" src="images/UserPhoto.png" alt="foto de perfil">
+                <div class="profile__content">
+                    <h2>Ale Ruíz</h2>
+                    <p class="company">ID Empresa: xxxxxxxx</p>
+                    <label for="file"></label>
+                    <progress class="progressBar" id="file" max="100" value="15">
+                </div>
+            </article>
+            <article class="card certificate">
+                <span class="material-icons certificate__alertIcon">info</span>
+                <div class="certificate__content">
+                    <p class="puntuation">Puntuación de tu último test: <strong>8.7</strong></p>
+                    <a href="/" class="getCertificate">Obtén aquí tu certificado</a>
+                </div>
+            </article>
+            <article class="card stadistics">
+                <header class="card__header">
+                    <p class="card__description">Tu nivel de conocimiento por áreas</p>
+                    <span class="material-icons seeMoreIcon">expand_circle_down</span>
+                </header>
+                <figure class="card__graphic">
+                    <img class="graphic" src="images/graphknowledge.jpg" alt="gráfico de conocimientos técnicos">
+                    <figcaption class="card__figcaption">Conocimientos técnicos</figcaption>
+                </figure>
+            </article>
+            <article class="card tests">
+                <header class="card__header">
+                    <p class="card__description">Tus test</p>
+                    <span class="material-icons seeMoreIcon">expand_circle_down</span>
+                </header>
+                <figure class="card__test">
+                    <img class="tests__img" src="images/QuizCard.jpg" alt="gráfico de conocimientos técnicos">
+                    <figcaption class="card__figcaption">Ciberataques</figcaption>
+                </figure>
+            </article>
+            <article class="card chatBot">
+                <img class="chatBot__img" src="images/robot.jpg" alt="chatBot">
+                <section class="chatBot__content">
+                    <p class="chatBot__text">¿Puedes comprobar una URL? ¿Qué contraseña es más segura?</p>
+                    <p class="card__description"><strong>Pregunta todas tus dudas a nuestro Chatbot</strong></p>
+                    <input class="chatBot__button" type="button" value="Accede aquí">
+                </section>
+            </article>
+        </main>    
+    </body>
+</html>
