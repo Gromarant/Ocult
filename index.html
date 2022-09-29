@@ -15,52 +15,98 @@
                 <span class="material-icons primaryIcon navigationIcon ">help</span>
             </section>
         </header>
-        <main class="dashboard">
-            <article class="card profile">
-                <img class="profile__photo" src="images/UserPhoto.png" alt="foto de perfil">
-                <div class="profile__content">
-                    <h2>Ale Ruíz</h2>
-                    <p class="company">ID Empresa: xxxxxxxx</p>
-                    <label for="file"></label>
-                    <progress class="progressBar" id="file" max="100" value="15">
-                </div>
-            </article>
-            <article class="card certificate">
-                <span class="material-icons certificate__alertIcon">info</span>
-                <div class="certificate__content">
-                    <p class="puntuation">Puntuación de tu último test: <strong>8.7</strong></p>
-                    <a href="/" class="getCertificate">Obtén aquí tu certificado</a>
-                </div>
-            </article>
-            <article class="card stadistics">
-                <header class="card__header">
-                    <p class="card__description">Tu nivel de conocimiento por áreas</p>
-                    <span class="material-icons primaryIcon">expand_circle_down</span>
-                </header>
-                <figure class="card__graphic">
-                    <img class="graphic" src="images/graphknowledge.jpg" alt="gráfico de conocimientos técnicos">
-                    <figcaption class="card__figcaption">Conocimientos técnicos</figcaption>
-                </figure>
-            </article>
-            <article class="card tests">
-                <header class="card__header">
-                    <p class="card__description">Tus test</p>
-                    <span class="material-icons primaryIcon">expand_circle_down</span>
-                </header>
-                <figure class="card__test">
-                    <img class="tests__img" src="images/QuizCard.jpg" alt="gráfico de conocimientos técnicos">
-                    <figcaption class="card__figcaption">Ciberataques</figcaption>
-                </figure>
-            </article>
-            <article class="card chatBot">
-                <img class="chatBot__img" src="images/robot.jpg" alt="chatBot">
-                <section class="chatBot__content">
-                    <p class="chatBot__text">¿Puedes comprobar una URL? ¿Qué contraseña es más segura?</p>
-                    <p class="card__description"><strong>Pregunta todas tus dudas a nuestro Chatbot</strong></p>
-                    <input class="chatBot__button" type="button" value="Accede aquí">
-                </section>
-            </article>
-        </main>
+
+        <div class="contentFrame">
+            <aside class="aside">
+                <button class="aside__selectedButton homeButton" type="button"><span class="material-icons">home</span>Inicio</button>
+                <button class="aside__button chatbotButton" type="button"><span class="material-icons">smart_toy</span>Chatbot</button>
+                <button class="aside__button notifyButton" type="button"><span class="material-icons">notifications</span>Notificaciones</button>
+                <button class="aside__button configButton" type="button"><span class="material-icons">miscellaneous_services</span>Configuración</button>
+            </aside> 
+
+            <main class="dashboard">
+                <article class="card profile">
+                    <img class="profile__photo" src="images/UserPhoto.png" alt="foto de perfil">
+                    <div class="profile__content">
+                        <h2>Ale Ruíz</h2>
+                        <p class="company">ID Empresa: 123456</p>
+                        <label for="file"></label>
+                        <progress class="progressBar" id="file" max="100" value="15">
+                    </div>
+                </article>
+                <article class="card certificate">
+                    <span class="material-icons certificate__alertIcon">info</span>
+                    <div class="certificate__content">
+                        <p class="puntuation">Puntuación de tu último test: <strong>8.7</strong></p>
+                        <a href="/" class="getCertificate">Obtén aquí tu certificado</a>
+                    </div>
+                </article>
+
+                <article class="card stadistics">
+                    <header class="card__header">
+                        <p class="card__description">Tu nivel de conocimiento por áreas</p>
+                        <span class="material-icons primaryIcon">expand_circle_down</span>
+                    </header>
+                    <section class="graphic__container">
+                        <figure class="card__graphic">
+                            <img class="graphic" src="images/graphknowledge.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Conocimientos técnicos</figcaption>
+                        </figure>
+                        <figure class="card__graphic">
+                            <img class="graphic" src="images/graphMedia.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Redes sociales</figcaption>
+                        </figure>
+                        <figure class="card__graphic">
+                            <img class="graphic" src="images/graphCompany.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Ámbito empresarial</figcaption>
+                        </figure>
+                        <figure class="card__graphic">
+                            <img class="graphic" src="images/graphDomestic.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Ámbito doméstico</figcaption>
+                        </figure>
+                        <figure class="card__graphic">
+                            <img class="graphic" src="images/graphFinance.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Ámbito financiero</figcaption>
+                        </figure>
+                    </section>
+                </article>
+
+                <article class="card tests">
+                    <header class="card__header">
+                        <p class="card__description">Tus test</p>
+                        <span class="material-icons primaryIcon">expand_circle_down</span>
+                    </header>
+                    <section class="test__container">
+                        <figure class="card__test">
+                            <img class="tests__img" src="images/QuizCard.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Ciberataques</figcaption>
+                        </figure>
+                        <figure class="card__test">
+                            <img class="tests__img" src="images/QuizCard.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Ciberataques</figcaption>
+                        </figure>
+                        <figure class="card__test">
+                            <img class="tests__img" src="images/QuizCard.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Ciberataques</figcaption>
+                        </figure>
+                        <figure class="card__test">
+                            <img class="tests__img" src="images/QuizCard.jpg" alt="gráfico de conocimientos técnicos">
+                            <figcaption class="card__figcaption">Ciberataques</figcaption>
+                        </figure>
+                    </section>
+                </article>    
+                
+                <article class="card chatBot">
+                    <img class="chatBot__img" src="images/robot.jpg" alt="chatBot">
+                    <section class="chatBot__content">
+                        <p class="chatBot__text">¿Puedes comprobar una URL? ¿Qué contraseña es más segura?</p>
+                        <p class="card__description"><strong>Pregunta todas tus dudas a nuestro Chatbot</strong></p>
+                        <input class="chatBot__button" type="button" value="Accede aquí">
+                    </section>
+                </article>
+            </main>
+
+        </div>
         <footer class="footer">
             <span class="material-icons footerIcon selected">home</span>
             <span class="material-icons footerIcon">smart_toy</span>
