@@ -7,9 +7,12 @@
 body {
     background-color: rgba(255, 243, 233, 1);
 }
+.primaryIcon {
+    color: rgba(242, 153, 74, 1);
+}
 .navBar {
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     height: 100px;
     justify-content: center;
@@ -28,9 +31,8 @@ body {
 .navBar__logo {
     height: 24px;
 }
-.navBar__infoIcon {
-    border-radius: 50%;
-    color: rgba(242, 153, 74, 1);
+.navigationIcon {
+    font-size: 36px;
 }
 .dashboard {
     height: 100vh;
@@ -38,6 +40,13 @@ body {
     margin-bottom: 50px;
     padding: 2rem;
     width: 100vw;
+}
+.info {
+    display: flex;
+    justify-content: right;
+    padding-bottom: 1.5rem;
+    width: 100%;
+
 }
 .card {
     align-items: center;
@@ -65,8 +74,8 @@ body {
     color: #696F79;
     word-wrap: wrap;
 }
-progress .progressBar {
-    background-color:  #FFD8D5;
+progress[value] {
+    color:  #FFD8D5;
 }
 .certificate {
     background-color: #18C3AE;
@@ -75,7 +84,7 @@ progress .progressBar {
 
 }
 .certificate__alertIcon {
-    font-size: 3rem;
+    font-size: 48px;
     height: 20%;
     width: 20%;
 }
@@ -103,10 +112,6 @@ progress .progressBar {
 .card__description {
     color: #0070AD;
     font-weight: 600;
-}
-.seeMoreIcon {
-    color: rgba(242, 153, 74, 1);
-    align-self: baseline;
 }
 .card__graphic {
     display: none;
@@ -162,6 +167,25 @@ progress .progressBar {
     justify-self: left;
     margin-top: 1rem;
     width: 120px;
+}
+.footer {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    padding: 2rem 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+.footerIcon {
+    color: #0070AD;
+    font-size: 28px;
+}
+.selected {
+    color: rgba(242, 153, 74, 1);
 }
 
 @media only screen and (min-width: 600px) {}
