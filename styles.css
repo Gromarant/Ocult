@@ -4,27 +4,36 @@
     padding: 0;
     font-family: 'roboto';
 }
+
 body {
     display: flex;
     justify-content: center;
     background-color: rgba(255, 243, 233, 1);
     width: 100vw;
+    min-width: 360px;
 }
 
+:root {
+    --primary-color: #0070AD;
+    --accent-color: rgba(242, 153, 74, 1);
+    --white-color: rgba(255, 255, 255, 1);
+  }
 .primaryIcon {
-    color: rgba(242, 153, 74, 1);
+    color: var( --accent-color );
 }
+
 .navBar {
     align-items: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--white-color);
     display: flex;
     height: 100px;
     justify-content: center;
-    padding: 2rem 2rem;
+    padding: 2rem 2.5rem;
     position: fixed;
     top: 0;
     width: 100vw;
     z-index: 1000;
+    min-width: 360px;
 }
 .navBar__container {
     align-items: center;
@@ -38,15 +47,24 @@ body {
 .navigationIcon {
     font-size: 36px;
 }
+
 .aside {
     display: none;
 }
+.contentFrame {
+    position: absolute;
+    top: 0px;
+    min-width: 360px;
+}
 .dashboard {
-    height: 100vh;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    height: 108vh;
     padding: 2rem;
+    padding-bottom: 250px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
     width: 100vw;
+    min-width: 360px;
 }
 .info {
     display: flex;
@@ -56,13 +74,14 @@ body {
 }
 .card {
     align-items: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--white-color);
     border-radius: 1rem;
     box-shadow: 0px 15px 40px #EDEDED;
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
     padding: 1rem;
+    min-width: 300px;
 }
 .profile {
     gap: 1rem;
@@ -72,7 +91,7 @@ body {
     width: 30%;
 }
 .profile__content {
-    color: #0070AD;
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
 }
@@ -82,7 +101,7 @@ body {
 }
 .certificate {
     background-color: #18C3AE;
-    color: #F4F4F4;
+    color: rgb(244, 244, 244);
     font-size: 14px;
 
 }
@@ -113,7 +132,7 @@ body {
     width: 100%;
 }
 .card__description {
-    color: #0070AD;
+    color: var(--primary-color);
     font-weight: 600;
 }
 .card__graphic {
@@ -152,7 +171,7 @@ body {
     margin: 0.8rem;
 }
 .chatBot__text {
-    color: #0070AD;
+    color: var(--primary-color);
     font-style: italic;
     margin-bottom: 0.8rem;
 }
@@ -173,21 +192,23 @@ body {
 }
 .footer {
     align-items: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--white-color);
+    bottom: 0px;
     display: flex;
     height: 50px;
     justify-content: space-around;
     padding: 2rem 2rem;
     position: fixed;
-    bottom: 0;
     width: 100vw;
+    z-index: 1000;
+    min-width: 300px;
 }
 .footerIcon {
-    color: #0070AD;
+    color: var(--primary-color);
     font-size: 28px;
 }
 .selected {
-    color: rgba(242, 153, 74, 1);
+    color: var(--accent-color);
 }
 
 @media only screen and (min-width: 600px) {
@@ -195,14 +216,19 @@ body {
     .navBar__logo {
         height: 36px;
     }
+    /* .contentFrame {
+        width: 600px;
+        display: flex;
+        justify-content: center;
+    } */
     .aside {
         display: none;
     }
     .dashboard {
-        height: 100vh;
-        margin-top: 100px;
+        height: fit-content;
+        min-height: 95vh;
         padding: 4rem;
-        width: 100vw;
+        width: 100%;
     }
     .card {
         gap: 2rem;
@@ -216,29 +242,26 @@ body {
     }
 }
 
-@media (orientation: landscape) {
-    .chatBot {
-        margin-bottom: 100;
-    }
-}
-
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1024px) {
 
     * {
         font-size: 18px;
     }
-    .contentFrame {
-        display: flex;
-        justify-content: center;
-        width: 100vw;
+
+    body {
+        height: 115vh;
     }
     .aside {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
-        margin-top: 100px;
-        padding: 2rem 1rem;
-        width: 30%;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        padding: 2rem 0rem;
+        width: 25%;
+        max-width:260px;
     }
     .aside__selectedButton {
         align-items: center;
@@ -259,36 +282,47 @@ body {
         border: none;
         color: #0C6292;
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         padding: 0rem 2rem;
         width: 220px;
     }
+
     .dashboard {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4%;
-        padding-left: 0rem;
-        padding: 2rem 0.5rem;
-        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        grid-template-rows: 20% repeat(2, 40%);
+        gap: 1rem;
+        left: 128px;
+        padding: 2rem 1rem;
+        padding-bottom: 2rem;
+        position: relative;
+        top: 100px;
+        width: 75%;
     }
-    .card {
+
+    .card { 
         height: 120px;
-        margin-bottom: 0.5rem;
         margin-bottom: 0rem;
-        padding: 0.5rem;
-        width: 48%;
+        width: 320px;
     }
     .profile{
         gap: 0.5rem;
+        height: 100%;
+        padding: 0rem 1rem;
+        width: 100%;
     }
     .profile__photo {
-        height: 80%;
+        height: 70%;
     }
     .profile__content > h2 {
         font-size: 24px;
     }
+
     .certificate {
-        grid-gap: 0.5rem;
+        height: 100%;
+        gap: 0.5rem;
+        padding: 0rem 2rem;
+        width: 100%;
     }
     .certificate__alertIcon {
         height: 35%;
@@ -297,37 +331,124 @@ body {
     .certificate__content {
         margin-left: 0rem;
     }
-    .statistics {
+
+    .stadistics {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    .card__header {
+        margin-bottom: 0px;
+    }
+    .card__details {
+        color: #515151;
+
     }
     .card__header > span {
         display: none;
     }
     .graphic__container {
         display: flex;
+        height: 100%;
+        justify-content: space-around;
         width: 100%;
     }
     .card__graphic {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        width: 50%;
     }
     .graphic {
-        display: none;
-        border-radius: 50%;
         height: 90px;
-        text-align: center;
         width: 90px;
     }
-    .card__figcaption {
-        display: none;
+    .graphic__figcaption {
+        margin-top: 1rem;
+        text-align: center;
+        color: #515151;
+        width: 90px;
+        font-size: 16px;
     }
-    .test {
+
+    .tests {
+        display: flex;
+        flex-direction: column;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        gap: 0.5rem;
+        height: 100%;
+        width: 100%;
+    }
+    .tests .card__header {
+        height: 15%;
+        margin-bottom: 0rem;
+        padding: 0.5rem;
+    }
+    .test__container {
+        display: grid;
+        grid-template-rows: repeat(2, 50%);
+        grid-template-columns: repeat(2, 50%);
+        gap: 0.5rem;
+        height: 75%;
+        width: 90%;
+    }
+    .card__test {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .test__figcaption {
+        display: none;
+        position: absolute;
+        left: 0.5rem;
+        color: #F4F4F4;
+        position: static;
+        left: 0px;
+    }
+    .ciber {
+        background-color: rgba(0, 0, 0, 0.393, 1);
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 0px;
+    }
+    .internet {
+        background-color: rgba(0, 0, 0, 0.393, 1);
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding: 0px;
+    }
+    .urls {
+        background-color: rgba(0, 0, 0, 0.393, 1);
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 0px;
+    }
+    .passwords {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 0px;
+    }
+
+    .chatBot {
+        grid-row: 3/4;
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+    }
+    .chatBot__content {
+        margin-left: 0px;
     }
     .footer{
         display: none;
     }
 }
-@media only screen and (min-width: 1200px) {}
-@media only screen and (min-width: 1536px) {}
+
+@media only screen and (min-width: 1200px) {
+
+
+}
