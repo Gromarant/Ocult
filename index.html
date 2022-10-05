@@ -10,13 +10,13 @@
     </head>
     <body>
         <header class="navBar">
-            <section class="navBar__container">
+            <div class="navBar__container">
                 <img class="navBar__logo" src="images/OcultLogo.png" alt="Logo Ocult">
                 <span class="material-icons primaryIcon navigationIcon ">help</span>
-            </section>
+            </div>
         </header>
 
-        <!-- <section class="contentFrame"> -->
+        <div class="contentFrame">
             <aside class="aside">
                 <button class="aside__selectedButton" type="button"><span class="material-icons">home</span>Inicio</button>
                 <button class="aside__button chatbotButton" type="button"><span class="material-icons">smart_toy</span>Chatbot</button>
@@ -25,30 +25,30 @@
             </aside> 
 
             <main class="dashboard">
-                <article class="card profile">
+                <div class="card profile">
                     <img class="profile__photo" src="images/UserPhoto.png" alt="foto de perfil">
                     <div class="profile__content">
                         <h2>Ale Ruíz</h2>
                         <p class="company">ID Empresa: 123456</p>
                         <label for="file"></label>
-                        <progress class="progressBar" id="file" max="100" value="15">
+                        <progress class="progressBar" id="file" max="100" value="15"></progress>
                     </div>
-                </article>
-                <article class="card certificate">
+                </div>
+                <div class="card certificate">
                     <span class="material-icons certificate__alertIcon">info</span>
                     <div class="certificate__content">
                         <p class="puntuation">Puntuación de tu último test: <strong>8.7</strong></p>
                         <a href="/" class="getCertificate">Obtén aquí tu certificado</a>
                     </div>
-                </article>
+                </div>
 
-                <article class="card stadistics">
+                <div class="card stadistics">
                     <header class="card__header">
                         <p class="card__description">Tu nivel de conocimiento por áreas</p>
                         <p class="card__details">Ver gráfico en detalle </p>
                         <span class="material-icons primaryIcon">expand_circle_down</span>
                     </header>
-                    <section class="graphic__container">
+                    <div class="graphic__container">
                         <figure class="card__graphic">
                             <img class="graphic" src="images/graphknowledge.jpg" alt="gráfico de conocimientos técnicos">
                             <figcaption class="graphic__figcaption">Conocimientos técnicos</figcaption>
@@ -69,19 +69,19 @@
                             <img class="graphic" src="images/graphFinance.jpg" alt="gráfico de conocimientos técnicos">
                             <figcaption class="graphic__figcaption">Ámbito financiero</figcaption>
                         </figure>
-                    </section>
-                </article>
+                    </div>
+                </div>
 
-                <article class="card tests">
+                <div class="card tests">
                     <header class="card__header">
                         <p class="card__description">Tus test</p>
                         <p class="card__details">Ver todo</p>
                         <span class="material-icons primaryIcon">expand_circle_down</span>
                     </header>
-                    <section class="test__container">
+                    <div class="test__container">
                         <figure class="card__test ciber">
                             <img class="tests__img " src="images/QuizCard.jpg" alt="gráfico de conocimientos técnicos">
-                            <div class="test__figcaption">Ciberataques</div>
+                            <figcaption class="test__figcaption">Ciberataques</figcaption>
                         </figure>
                         <figure class="card__test internet">
                             <img class="tests__img " src="images/QuizCardInternet.jpg" alt="gráfico de conocimientos técnicos">
@@ -95,20 +95,20 @@
                             <img class="tests__img " src="images/QuizCardPassword.jpg" alt="gráfico de conocimientos técnicos">
                             <figcaption class="test__figcaption">Contraseñas</figcaption>
                         </figure>
-                    </section>
-                </article>    
+                    </div>
+                </div>    
                 
-                <article class="card chatBot">
+                <div class="card chatBot">
                     <img class="chatBot__img" src="images/robot.jpg" alt="chatBot">
-                    <section class="chatBot__content">
+                    <div class="chatBot__content">
                         <p class="chatBot__text">¿Puedes comprobar una URL? ¿Qué contraseña es más segura?</p>
                         <p class="card__description"><strong>Pregunta todas tus dudas a nuestro Chatbot</strong></p>
                         <input class="chatBot__button" type="button" value="Accede aquí">
-                    </section>
-                </article>
+                    </div>
+                </div>
             </main>
+        </div>
 
-        <!-- </section> -->
         <footer class="footer">
             <span class="material-icons footerIcon selected">home</span>
             <span class="material-icons footerIcon">smart_toy</span>
